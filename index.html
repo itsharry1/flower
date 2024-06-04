@@ -22,7 +22,21 @@
     :root {
       --dark-color: #000;
     }
-
+    .night h1:nth-child(1) {
+      color: #355c7d;
+      font-family: "Fira Code", monospace;
+      font-weight: 800;
+      font-size: 20px;
+      margin: 0 0 0 35%;
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 600px;
+      /* animation: third 5s steps(40,end) 2s forwards; */
+      font-family: "Poppins", sans-serif;
+      font-family: "Teko", sans-serif;
+      margin-left: 5px;
+    }
     body {
       display: flex;
       align-items: flex-end;
@@ -79,9 +93,9 @@
         linear-gradient(90deg, #00fffa, #f0f0f0);
     }
 
-    .text {
+    #Davil1 {
       color: cyan;
-      font-size: 1.5rem;
+      font-size: 2rem;
       margin-left: 90px;
       margin-top: 50px;
     }
@@ -1243,7 +1257,7 @@
 
   <body class="not-loaded">
     <div class="night">
-      <div class="text">HAPPY BIRTHDAY JI</div>
+      <h1 id="Davil1"></h1>
       <span class="material-symbols-outlined"> dark_mode </span>
     </div>
     <div class="flowers">
@@ -1557,12 +1571,23 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script src="text.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
     <script>
       onload = () => {
         const c = setTimeout(() => {
           document.body.classList.remove("not-loaded");
           clearTimeout(c);
         }, 1000);
+
+        var typed = new Typed("#Davil1", {
+          strings: ["Happy birthday🤍"],
+          typeSpeed: 60,
+          startDelay: 2000,
+          cursorChar: "|",
+          showCursor: false,
+        });
       };
     </script>
   </body>
